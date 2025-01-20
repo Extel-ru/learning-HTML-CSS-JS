@@ -1,0 +1,61 @@
+
+
+.first {
+  display: flex;
+  flex-direction: row;
+}
+
+.tre {
+  background-color: lightblue;
+  width: 200px;
+}
+.rte {
+  background-color: lightpink;
+  width: 75px;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+}
+
+.photo {
+  width: 50px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+button {
+  height: 30px;
+  margin-top: 10px;
+  color: white;
+  background-color: rgb(20, 149, 235);
+  width: 90px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+
+
+.row {
+  display: flex;
+  height: 50px;
+  font-size: medium;
+}
+
+.animal-container {
+  margin-left: 10px;
+  justify-content: left; 
+  width: 400px; 
+  display: grid;
+}
+.name {
+  font-weight: bold;
+}
+.title {
+  opacity: 0.5;
+}
+.popularity {
+  opacity: 0.5;
+}

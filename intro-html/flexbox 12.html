@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Flexbox practice 12</title>
+    <link rel="stylesheet" href="styles/flexbox12.css">
+  </head>
+
+  <body>
+    <div class="first">
+      <div class="tre">200px</div>
+      <div class="rte">75px</div>
+    </div>
+
+    <div class="items">
+      <div style="background-color: lightblue; width: 50px;">item1</div>
+      <div style="background-color: lightpink; flex: 1;">item2</div>
+      <div style="background-color: lightblue; width: 75px;">item3</div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+      <div style="background-color: lightblue;">item1</div>
+      <div style="background-color: lightpink;">item2</div>
+      <div style="background-color: lightblue;">item3</div>
+      <div style="background-color: lightpink;">item4</div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between;height:  50px; 
+    border: solid; border-color: grey; align-items: center;">
+      <div style="background-color: lightpink;">item1</div>
+      <div style="background-color: lightpink;">item2</div>
+    </div>
+
+
+    <div style="margin-top: 50px; width: 400px; padding: 10px 10px 10px 10px;
+    display: flex; flex-direction: column; row-gap: 10px;">
+      
+      <div class="row">
+        <img class="photo" src="cat.jpg">
+        <div class="animal-container">
+          <div class="name">Oliver</div>
+          <div class="title">the cat</div>
+          <div class="popularity">Popular</div>
+        </div>
+        <button>Follow</button>
+      </div>
+
+      <div class="row">
+        <img class="photo" src="cat2.jpg">
+        <div class="animal-container">
+          <div class="name">Mimi</div>
+          <div class="title">Sleepy Cat</div>
+          <div class="popularity">Popular</div>
+        </div>
+        <button>Follow</button>
+      </div>
+
+      <div class="row">
+        <img class="photo" src="dog.jpg">
+        <div class="animal-container">
+          <div class="name">Rex</div>
+          <div class="title">Happy Bulldog</div>
+          <div class="popularity">Popular</div>
+        </div>
+        <button>Follow</button>
+      </div>
+
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,110 @@
+
+
+.overall {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.item {
+  width: 100px;
+  background-color: lightpink;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.p1 {
+  background-color: black;
+  color: white;
+}
+.blue {
+  width: 200px;
+  background-color: lightblue;
+}
+
+.flexbox-two {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  margin-bottom: 50px;
+}
+.first-div {
+  background-color: lightpink;
+  width: 100px;
+}
+.second-div {
+  width: 200px;
+  background-color: lightblue;
+}
+.row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -15px;
+}
+
+
+.nested-flexbox {
+  display: block;
+  border: solid;
+  border-color: rgb(221, 221, 221);
+  border-width: thin;
+  border-radius: 8px;
+  height: 300px;
+  width: 400px;
+  padding-left: 15px;
+  row-gap: 50px;
+}
+
+
+.title {
+  opacity: 0.5;
+}
+
+.block-one {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.conversations {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+  margin-top: -5px;
+  width: 320px;
+}
+.name-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name-p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.time {
+  opacity: 0.6;
+  font-size: medium;
+}
+
+.intro {
+  font-size: 17px;
+  font-weight: bold;
+}
+.text {
+  opacity: 0.6;
+  font-weight: 510;
+}
