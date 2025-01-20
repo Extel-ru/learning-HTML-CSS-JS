@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.1</title>
+
+  </head>
+  <body>
+     <div class="main">
+      <div>
+        <ul>
+          <li>One</li>
+          <li id="two">Two</li>
+          <li>Three</li>
+        </ul>
+      </div>
+      <div id="blue" class="color">blue</div>
+      <div class="color">green</div>
+      <div class="color">yellow</div>
+      <div class="color">purple</div>
+      <button onclick="clickMe(this)">Нажми меня</button>
+      <button onclick="clickMe(this)">Нажми меня снова</button>
+     </div>
+
+
+    <script>
+
+       document.getElementById('blue').style.backgroundColor = 'red';
+      q = document.getElementsByTagName('li');      
+      console.log(q);
+      console.log(document.getElementById('two'));
+      let c = document.getElementsByClassName('color');
+      console.log(c[0]);
+      console.log(document.querySelectorAll('.color').item(1));
+
+      function clickMe(el) {
+        console.dir(el.innerHTML)
+      }
+    </script>
+  </body>
+</html>

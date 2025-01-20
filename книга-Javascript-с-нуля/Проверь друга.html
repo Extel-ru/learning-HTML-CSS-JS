@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Проверь друга</title>
+
+  </head>
+  <body>
+    
+    <script>
+      let userName = prompt('Проверьте, есть ли у меня друг с таким именем. Введите имя:');
+
+      switch(userName) {
+        case 'Anton': 
+        case 'Alexandr':
+        case 'Vitaliy':
+        case 'Alexey':
+        case 'Anatoliy':
+        alert(`${userName} is my friend`);
+        break;
+        default:
+          alert(`I dont know ${userName}`);
+      }
+    </script>
+  </body>
+</html>

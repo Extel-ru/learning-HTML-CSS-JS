@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>practice</title>
+
+  </head>
+  <body>
+    
+    <script>
+      /*
+      let i = 0;
+      let step = 4;
+
+      do {
+        console.log(i)
+        i += step;
+      } while (i <= 100)
+      */
+
+      /*
+     let mywork = [];
+     for (let i = 1; i < 10; i++) {
+      let stat = i % 2? true : false;
+      let temp = {
+        name: `Lesson ${i}`,
+        status: stat
+      }
+      mywork.push(temp);
+     }
+     console.log(mywork);
+     */
+
+/*
+     let arr = [];
+
+     for (let x = 0; x < 11; x++) {
+      console.log(x);
+     }
+     for (let i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+     }
+
+     for (let val of arr) {
+      console.log(val);
+     }
+ */
+/*
+ let dog = {
+  name: 'Barney',
+  breed: 'Toy-pudel',
+  years: 0.4
+ }
+
+ for (let prop in dog) {
+  console.log(dog[prop]);
+ }
+
+ let myDog = ['Barney', 'Toy-pudel', 0.4];
+ for (let attr of myDog) {
+  console.log(attr);
+ }
+  */
+ /*
+  words = ['hello', 'world', 'this', 'is', 'great']
+ 
+  function smash (words) {
+   let sentence = '';
+    for (let word of words){
+     sentence += word + ' ';
+    };
+    sentence = sentence.trim();
+    return sentence;
+    console.log(sentence);
+  }
+  smash(words);
+  */
+/*
+  const myArr = [1, 5, 7];
+  for (el in myArr) {
+    console.log(Number(el));
+    el = Number(el) + 5;
+    console.log(el);
+  }
+*/
+
+
+  function howMuchILoveYou(n) {
+    let petals = ["I love you", "a little", "a lot", "passionately", "madly", 
+    "not at all"];
+    let result = '';
+
+    for (let i = 0; i < n; i++) {
+      if (n < 6) {
+        result = petals[n - 1];
+      } else {
+        result = petals[i % petals.length];
+      }
+    } 
+
+      
+    return result;
+
+  }
+  console.log(howMuchILoveYou(7));
+  console.log(howMuchILoveYou(3));
+  console.log(howMuchILoveYou(6));
+    </script>
+  </body>
+</html>

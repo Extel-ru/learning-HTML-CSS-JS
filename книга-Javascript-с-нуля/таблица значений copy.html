@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Таблица значений</title>
+
+  </head>
+  <body>
+    
+    <script>
+      let myTable = [];
+      const i = 6;
+      const j = 10;
+      let counter = 0;
+
+      for (let y = 0; y <= i; y++) {
+        let tempTable = [];              
+        for (let x = 0; x <= j; x++) {
+          counter++;
+          tempTable.push(counter);
+        }
+        myTable.push(tempTable);
+      }
+      console.table(myTable);
+
+    </script>
+  </body>
+</html>

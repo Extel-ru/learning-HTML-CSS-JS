@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Игра "Виселица"</title>
+
+    <style>
+      .gameArea {
+        text-align: center;
+        font-size: 2em;
+      }
+      .box,
+      .boxD {
+        display: inline-block;
+        padding: 5px;
+      }
+      .boxE {
+        display: inline-block;
+        width: 40px;
+        border: 1 px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.5em;
+      }
+    </style>
+    
+    <body>
+      <div class="gameArea">
+        <div class="score"></div>
+        <div class="puzzle"></div>
+        <div class="letters"></div>
+        <button id="startGame">Начать игру</button>
+      </div>
+    
+      <script>
+        let game = {
+          current: '',
+          solution: '',
+          puzzle: [],
+          total: 0
+        }
+    
+        const words = ['Россия', 'Белоруссия', 'США', 'Канада', 'Люксембург', 'Италия', 'Франция', 'Германия', 'Нидерланды', 'Гватемала'];
+    
+        const score = document.querySelector('.score');
+        const puzzle = document.querySelector('.puzzle');
+        const letters = document.querySelector('.letters');
+        const startButton = document.getElementById('startGame');
+    
+     startButton.addEventListener('click', startGame);
+    
+        function startGame() {
+          if (words.length > 0) {
+            startButton.style.display = 'none';
+            game.puzzle = [];
+            game.total = 5;
+            game.current = words.splice(Math.floor(Math.random() * words.length), 1)[0];
+            game.solution = game.current.split('');
+            builder();
+          } else {
+            score.textContent = 'No more words';
+          }
+        }
+    
+        function createElements(elType, parentEle, output, cla) {
+          const temp = document.createElement(elType);
+          temp.classList.add('boxE');
+          parentEle.append(temp);
+          temp.textContent = output;
+          return temp;
+        }
+    
+        function updateScore() {
+          score.textContent = `Total Letters Left : ${game.total}`;
+          if (game.total <= 0) {
+            score.textContent = 'Вы проиграли';
+            startButton.style.display = 'block';
+          } else if (game.puzzle.every(ele => ele.textContent !== '-')) {
+            score.textContent = 'Вы выиграли!';
+            startButton.style.display = 'block';
+          }
+        }
+    
+        function builder() {
+          letters.innerHTML = '';
+          puzzle.innerHTML = '';
+          game.solution.forEach((lett) => {
+            let div = createElements('div', puzzle, '-', 'boxE');
+            if (lett === ' ') {
+              div.style.borderColor = 'white';
+              div.textContent = ' ';
+            }
+            game.puzzle.push(div);
+          });
+          const russianLetters = Array.from({ length: 32 }, (_, i) => String.fromCharCode(i + 1040));
+          russianLetters.forEach((letter) => {
+            let div = createElements('div', letters, letter, 'box');
+            let checker = function (e) {
+              div.style.backgroundColor = '#ddd';
+              div.classList.remove('box');
+              div.classList.add('boxD');
+              div.removeEventListener('click', checker);
+              checkLetter(letter);
+            }
+            div.addEventListener('click', checker);
+          });
+          updateScore();
+        }
+    
+        function checkLetter(letter) {
+          let found = false;
+          game.solution.forEach((ele, index) => {
+            if (ele.toUpperCase() === letter.toUpperCase()) { // compare letters in uppercase
+              game.puzzle[index].textContent = letter;
+              found = true;
+            }
+          });
+          if (!found) {
+            game.total--;
+          }
+          updateScore();
+        }
+      </script>
+    </script>
+  </body>
+</html>

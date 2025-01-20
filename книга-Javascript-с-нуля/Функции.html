@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>practice</title>
+
+  </head>
+  <body>
+    
+    <script>
+      /*
+      j = 8;
+      m = 9;
+      function summ(a, b) {
+        return a + b;
+      }
+
+    console.log(summ(j, m));
+    console.log(summ(8, 19));
+    */
+/*
+    let arr = ['Отзывчивый', 'Ленивый', 'Честный', 'Эгоистичный'];
+
+    function nameAttr() {
+      let name = prompt('Введите ваше имя');
+      let number = Math.random();
+      console.log (number);
+      if (number < 1/4) {
+        alert(`${name} ${arr[0]}`);
+      } else if ( number >= 1/4 && number < 2/4) {
+        alert(`${name} ${arr[1]}`);
+      } else if ( number >= 2/4 && number < 3/4) {
+        alert(`${name} ${arr[2]}`);
+      } else if ( number >= 3/4) {
+        alert(`${name} ${arr[3]}`);
+      }
+    }
+
+    nameAttr();
+    */
+/*
+    let a = 1000;
+
+    (() => {
+      let a = 3000;
+      console.log(a);
+    }) ();
+
+
+    let result = (function () {
+      let q = 'Laurence';
+      return q;
+    });
+    console.log(result);
+    console.log(result(q));
+
+    (function (q) {
+      console.log(`My name is ${q}`)
+    }) ('Laurence');
+
+    */
+/*
+    function recursive (n) {
+      if (n === 0) {
+        return 1;
+      } else if (n > 0) {
+        return n * recursive(--n);
+      }
+    }
+
+    console.log(recursive(3));
+
+
+  let start = 10;
+  function loop1 (val) {
+    console.log(val);
+    if (val < 1) {
+      return;
+    } 
+    return loop1(val - 1);
+  }
+  
+  loop1(start);
+
+  function loop2(val) {
+    console.log(val);
+    if (val > 0) {
+      val--;
+      return loop2(val);
+    }
+    return;
+  }
+  loop2(start);
+*/
+/*
+  let vara = function () {
+    console.log('Hello,world!');
+  }
+  vara('hello1');
+*/
+
+
+  function recursive(param) {
+    if ( param === 10) {
+      console.log(`It's 10 already`);
+    } else if (param > 0 && param < 10) {
+      param++;
+      console.log(param);
+      recursive(param);
+    }
+  }
+  recursive(4);
+  
+
+  param = 2;
+  while (param < 10) {
+    param++;
+    console.log(param);
+  }
+  
+  const first = (one) => console.log('one');
+  const second = (two) => console.log('two');
+
+  const third = (three) => {
+    console.log('three');
+    first();
+    second();
+  }
+
+  function four () {
+    console.log('four');
+    setTimeout(first, 0);
+    third();
+  }
+  four();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Магический шар судьбы</title>
+
+  </head>
+  <body>
+    
+    <script>
+      let randomNumber = (Math.floor(Math.random() * 6));
+      let userQuestion = prompt('Напишите ваш вопрос магическому шару судьбы.');
+
+      switch(randomNumber) {
+        case 0: alert('Этого не стоит ожидать');
+        break;
+        case 1: alert('не стоит ожидать в ближайшее время');
+        break;
+        case 2: alert('Соотношение успеха/неудачи равны');
+        break;
+        case 3: alert('Есть шансы, что произойдёт в перспективе');
+        break;
+        case 4: alert('Вероятнее всего произойдет');
+        break;
+        case 5: alert('Абсолютно точно произойдет');
+        break;
+      }
+      console.log(randomNumber);
+      
+
+    </script>
+  </body>
+</html>

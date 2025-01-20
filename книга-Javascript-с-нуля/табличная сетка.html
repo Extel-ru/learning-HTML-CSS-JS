@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Таблица значений</title>
+
+  </head>
+  <body>
+    
+    <script>
+
+      // упражнение 5.5
+      const myTable = [];
+      const cells = 64;
+      let counter = 0;
+      let row;
+      for (let i = 0; i < cells + 1; i++) {
+        if (counter % 8 == 0) {
+          if (row != undefined) {
+            myTable.push(row);
+          }
+          row = [];
+        }
+        counter++;
+        let temp = counter;
+        row.push(temp);
+      }
+console.table(myTable);
+
+    </script>
+  </body>
+</html>

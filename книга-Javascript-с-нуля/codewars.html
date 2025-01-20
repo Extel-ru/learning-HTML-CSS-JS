@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>codewars</title>
+
+  </head>
+  <body>
+    
+    <script>
+        function abbrevName(name){
+          let arr = [];
+          let ini = name.split(' ').forEach(element => {
+            let letter = element.charAt(0).toUpperCase();
+            arr.push(letter);            
+            });
+          console.log(arr);
+          let abbre = arr.join('.');
+          console.log(abbre)
+          return abbre;          
+        }
+      
+        console.log(abbrevName("Sam Harris"));
+    </script>
+  </body>
+</html>

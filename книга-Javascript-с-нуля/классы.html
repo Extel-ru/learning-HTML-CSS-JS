@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>practice</title>
+
+  </head>
+  <body>
+    
+    <script>
+      /*
+      class Person {
+        constructor(firstname, lastname) {
+          this.firstname = firstname,
+          this.lastname = lastname
+        }
+        fullname(first, second) {
+        return first + ' ' + second;
+      }
+      }
+
+      let p = new Person('Sergei', 'Ashakhanov');
+      let k = new Person('Alex', 'Kilin');
+      console.log(p.firstname, p.lastname);
+      console.log(k.firstname, k.lastname);
+
+      console.log('Hello, ' + p.fullname('Alex', 'Kilin') + '!');
+      */
+    
+      class Animal {
+        constructor(type, sound, continent) {
+          this.type = type;
+          this.sound = sound;
+          this.continent = continent
+        }
+        getSound(type, sound) {
+          console.log(this.type, this.sound);
+        }
+      }
+      let whiteBear = new Animal('bear', 'roar', 'Arctica');
+      let amurTiger = new Animal('tiger', 'meow', 'Eurasia');
+
+     whiteBear.getSound('1', '2');
+     amurTiger.getSound();
+
+     Animal.prototype.showAnother = function() {
+      console.log('another animal');
+     }
+
+     console.log(whiteBear.showAnother);
+     
+    </script>
+  </body>
+</html>

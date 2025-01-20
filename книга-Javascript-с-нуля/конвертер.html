@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Конвертер</title>
+
+  </head>
+
+  <body  style="display:flex; flex-direction: row;">
+    <div>
+      <p style="font-size: large; font-weight: bold;">Конвертер миль в километры</p>
+      <input class="js-miles"type="text" name="количество миль" placeholder="Введите количество миль">
+      <button class="js-button-miles">Ввести</button>
+      <p class="js-result"></p>
+    </div>
+
+
+
+
+    <div style="margin-left: 30px;">
+      <p style="font-size: large; font-weight: bold;">Вычислитель индекса массы тела (ИМТ)
+      </p>
+      <p style="display: flexbox;">
+        <input class="js-height" style="width: 200px" type="text" placeholder="Введите рост в сантиметрах">
+            <p>
+        <input class="js-weight" style="width: 200px;" type="text" placeholder="Введите вес в килограммах">
+
+        <p>
+          <button class="js-button-imt">Ввести данные</button>
+        </p>
+
+      </p>
+
+      <p>Ваш результат ИМТ: 
+        <span class="js-result-imt">
+          <span class="js-imt-description"></span>
+      </span></p>
+    </div>
+
+
+
+    <script>
+
+   
+      
+      
+      document.querySelector('.js-button-miles')
+        .addEventListener('click', () => {
+          let milesNumber = document.querySelector('.js-miles').value;
+          let resultElement = document.querySelector('.js-result');
+          
+
+          let result = 0;
+          
+          if (!isNaN(parseFloat(milesNumber))) {
+            result = (milesNumber * 1.609).toFixed(2);
+        
+            resultElement.textContent = `Результат: ${result} км`;
+            
+          } else {
+            alert('Введите числовое значение миль');
+            return;
+          }
+        })
+      
+    
+      
+      document.querySelector('.js-button-imt')
+        .addEventListener('click', () => {
+          let height = document.querySelector('.js-height').value; //в метрах
+          let weight = document.querySelector('.js-weight').value; 
+          let imtHtml = document.querySelector('.js-result-imt');
+          let imtDescription = document.querySelector('.js-imt-description');
+
+          let result = 0;
+
+         if (isNaN(height) || isNaN(weight)) {
+            alert('Введите числовые значения');
+          } else {
+            result = (weight / ((height /100) ** 2)).toFixed(2);
+            console.log(result)
+              if (result < 16) {
+                imtHtml.textContent = `${result} - Выраженный дефицит массы тела`;
+              } else if (result >= 16 && result < 18.5) {
+                imtHtml.textContent = `${result} - Недостаточная (дефицит) масса тела`;
+              } else if (result >= 18.5 && result < 25) {
+                imtHtml.textContent = `${result} - Норма`;
+              } else if (result >= 25 && result < 30) {
+                imtHtml.textContent = `${result} - Избыточная масса тела (предожирение)`;
+              } else if (result >= 30 && result < 35) {
+                imtHtml.textContent = `${result} - Ожирение первой степени`
+              } else if (result >= 35 && result < 40) {
+                mtHtml.textContent = `${result} - Ожирение второй степени`
+              } else if (result >= 40) {
+                mtHtml.textContent = `${result} - Ожирение второй степени`
+              }
+           }
+        })
+      
+
+
+    </script>
+  </body>
+</html>

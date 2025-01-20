@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>practice 4</title>
+
+  </head>
+  <body>
+    
+    <script>
+      /*
+      let coding = true;
+      
+      if (coding) {
+        console.log('Всё получится!');
+      } if (!coding) {
+        console.log('Старайся сильнее, и все получится!');
+      }
+      */
+      /*
+      let age = prompt('Возраст пользователя');
+      age =  Number(age);
+      let message = '';
+      if (age >= 21) {
+        message = 'Разрешить вход';
+      } else if (age >= 19) {
+        message = 'Вход разрешен, но покупка алкоголя запрещена';
+      } else {
+        message = 'Вход запрещен';
+      }
+      alert(message);
+      
+
+      let id = true;
+      id = true ? console.log('allowed') : console.log('denied');
+
+      */
+
+      let prize = prompt('Введите число от 1 до 10.');
+      prize = Number(prize);
+      
+      switch(prize) {
+        case 1: 
+        case 6: 
+        alert('Вы выиграли путеществие в Тайланд!');
+        break;
+        case 10: 
+        case 7: 
+        alert('Вы ничего не выиграли');
+        break;
+        case 2: 
+        case 4: 
+        alert('Вы выиграли хорошее настроение!');
+        break;
+        case 3: 
+        case 5: 
+        alert('Вы выиграли конфетку!');
+        break;
+        case 8: 
+        case 9: 
+        alert('Вы выиграли Ferrari!!!!');
+        break;
+        default:
+          alert('Введите значение от 1 до 10');
+      }
+      
+    </script>
+  </body>
+</html>

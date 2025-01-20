@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Камень ножницы бумага</title>
+
+  </head>
+  <body>
+    
+
+    <script>
+      let game = ['rock', 'paper', 'scissors'];
+      let userNumber = Math.floor(Math.random() * 3);
+      let computerNumber = Math.floor(Math.random() * 3);
+      let userResult = '';
+      let computerResult = '';
+
+      switch(userNumber) {
+        case 0: userResult = 'rock';
+        break;
+        case 1: userResult = 'paper';
+        break;
+        case 2: userResult = 'scissors'
+        break;
+      }
+
+      switch(computerNumber) {
+        case 0: computerResult = 'rock';
+        break;
+        case 1: computerResult = 'paper';
+        break;
+        case 2: computerResult = 'scissors'
+        break;
+      }
+
+      function playGame() {
+        if (userResult === 'rock' && computerResult === 'rock') {
+          alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Ничья`);
+        } else if (userResult === 'rock' && computerResult === 'scissors') {
+            alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Вы победили.`);
+        } else if (userResult === 'rock' && computerResult === 'paper') {
+          alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Вы проиграли.`);
+        } else if (userResult === 'paper' && computerResult === 'rock') {
+          alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Вы победили.`);
+        } else if (userResult === 'paper' && computerResult === 'paper') {
+          alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Ничья.`);
+        } else if (userResult === 'paper' && computerResult === 'scissors') {
+          alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Вы проиграли.`);
+        } else if (userResult === 'scissors' && computerResult === 'scissors') {
+          alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Ничья.`);
+        } else if (userResult === 'scissors' && computerResult === 'rock') {
+          alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Вы проиграли.`);
+        } else if (userResult === 'scissors' && computerResult === 'paper') {
+          alert(`Вы выбрали ${userResult}, компьютер выбрал ${computerResult}. Вы победили.`);
+        }
+      }
+      console.log(userResult);
+      console.log(computerResult);
+      playGame();
+
+    </script>
+  </body>
+</html>

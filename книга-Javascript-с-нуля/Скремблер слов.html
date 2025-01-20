@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Скремблер слов</title>
+
+  </head>
+  <body>
+    
+    <script>
+
+      function scrambler(word) {
+        let string ='';
+        let arr = word.split('');
+        newArr = [];
+        console.log(arr);
+        for (let i = arr.length - 1; i >= 0; i--) {
+          let index = `${Math.floor(Math.random() * (i + 1))}`;
+          string += `${arr[index]}`;          
+          console.log(arr.splice(index, 1));
+          console.log(arr);
+        }
+        console.log(string);
+        return string;    
+          
+      }
+
+      
+      scrambler('Javascript');
+    </script>
+  </body>
+</html>

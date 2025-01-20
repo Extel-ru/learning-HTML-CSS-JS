@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Собственная аналитика</title>
+
+    <style>
+      .main {
+        width: 15rem;
+        height: 15rem;  
+        display: flex;
+        position: relative;  
+        display: flex;
+      }
+      .square {
+        border: 0.01rem solid black;
+        width: 7rem;
+        height: 7rem;
+        position: absolute;        
+      }
+      .square:nth-child(1) {
+        top: 0;
+        left: 0;
+        background-color: lightgreen;
+        text-align: center;
+        line-height: 7.0rem;
+      }
+      .square:nth-child(2) {
+        top: 0;
+        right: 0;
+        background-color: rgb(228, 72, 72);
+        text-align: center;
+        line-height: 7.0rem;
+      }
+      .square:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        background-color: blueviolet;
+        text-align: center;
+        line-height: 7.0rem;
+      }
+      .square:nth-child(4) {
+        bottom: 0;
+        right: 0;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 7.0rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main js-main-div">
+        <div class="square" id="green">Green</div>
+        <div class="square" id="red">Red</div>
+        <div class="square" id="violet">Violet</div>
+        <div class="square" id="blue">Blue</div>
+    </div>
+
+    <script>
+      let info = [];
+
+      let mainCont = document.querySelector('.js-main-div');
+
+      mainCont.addEventListener('click', tracker);
+
+      function tracker (e) {
+        const el = e.target;
+        if(el.id) {
+          const temp ={};
+          temp.content = el.textContent;
+          temp.id = el.id;
+          temp.tagName = el.tagName;
+          temp.class = el.className;
+          console.dir(el);
+          info.push(temp);
+          console.log(info);
+        }        
+      }
+
+    </script>
+  </body>
+</html>

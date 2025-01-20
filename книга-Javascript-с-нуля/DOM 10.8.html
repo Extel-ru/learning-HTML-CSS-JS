@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.8</title>
+    <style>
+         .js-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .js-table th, .js-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .js-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .js-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+  </head>
+  <body>
+    
+    <div id="message"></div>
+    <div id="output"></div>
+
+    
+
+    <script>
+      
+
+      const names = ['Sergei', 'Alexandr', 'Vitaliy', 'Maxim', 'Alexey', 'Anatoliy'];
+      const message = document.getElementById('message');
+      
+      function build() {
+        let html = ` 
+          <table class="js-table">
+            <th>Список имён</th>                  
+           `;
+          names.forEach((name, index) => {
+            
+            html += `<tr class="box" data-row="${index+1}"
+              data-name="${name}" onclick="getData(this)">
+              <th>${name}</th> 
+              <th>${index + 1}</th>
+              </tr>`            
+          })
+          html += '</table>';
+          document.getElementById('output').innerHTML = html;
+       }
+     
+      build();
+
+      function getData(el) {
+        let temp = el.getAttribute('data-row');
+        let tempName = el.getAttribute('data-name');
+        message.innerHTML = `${tempName} is in row #${temp}`
+      }
+    </script>
+  </body>
+</html>

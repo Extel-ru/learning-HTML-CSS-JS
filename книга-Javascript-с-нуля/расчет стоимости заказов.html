@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Расчет стоимости заказов</title>
+
+  </head>
+  <body>
+    
+    <script>
+      let fullPrice;
+      class Cart{
+        constructor(tax, price, quantity) {
+          this.tax = tax;
+          this.price = price;
+          this.quantity = quantity;
+        }
+
+        get fullPriceSum() {
+          return fullPrice = (this.price * this.quantity) * this.tax;
+        }
+      }
+      let basketball = new Cart(0.1, 1800, 2);
+
+      console.log(basketball.fullPriceSum);
+    </script>
+  </body>
+</html>

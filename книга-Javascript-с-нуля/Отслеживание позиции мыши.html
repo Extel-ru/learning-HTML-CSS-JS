@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Отслеживание позиции мыши</title>
+    <style>
+        .square {
+          border: 1px solid black;
+          height: 35rem;
+          width: 35rem;
+        }
+        .squared {
+          background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="square"></div>
+    <p class="output"></p>
+
+
+    <script>
+      const square = document.querySelector('.square');
+      const output = document.querySelector('.output');
+
+      square.addEventListener('mouseover', () => {
+        square.classList.add('squared');
+        console.log('mouseover');
+      });
+
+      square.addEventListener('mouseout', (e) => {
+        square.classList.remove('squared');
+        console.log('mouseout');
+      });
+
+      square.addEventListener('mousemove', coordin);
+
+      function coordin() {
+        let html = 'X:' + event.clientX + ' | Y:' + event.clientY;
+        output.innerHTML = html;
+      }
+    </script>
+  </body>
+</html>

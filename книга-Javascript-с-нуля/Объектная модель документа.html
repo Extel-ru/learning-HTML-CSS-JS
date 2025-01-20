@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>practice</title>
+
+  </head>
+  <body>
+     <!--<div class="output"></div> -->
+
+
+
+     <div class="output">
+      <h1>Hello</h1>
+      <div>Test</div>
+      <ul>
+        <li id="one">One</li>
+        <li class="red">Two</li>
+      </ul>
+      <div>Test</div>
+     </div>
+
+    <script>
+      /*
+      const q = document.querySelector('.output');
+      q.textContent = 'Hello, world!';
+      q.classList.add('red');
+      q.id = 'tester';
+      q.style.backgroundColor = 'red';
+      console.log(document.URL);
+      q.textContent = document.URL;
+      */
+
+      const q = document.querySelector('.output');
+      let mainList = document.querySelector('ul');
+      mainList.id = 'mainList';
+      const element = document.querySelectorAll('div');
+      
+      for (let i = 0; i < element.length; i++) {
+        element[i].id = 'id' + (i + 1);
+        if (i % 2) {
+          element[i].style.color = 'red';
+        } else {
+          element[i].style.color = 'blue';
+        }
+      }
+    </script>
+  </body>
+</html>

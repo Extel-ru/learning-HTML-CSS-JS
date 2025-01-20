@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>practice</title>
+
+  </head>
+  <body>
+    
+    <script>
+      /*
+      let encodedUri = "How's%20it%20going%3f"
+      let decodedUri = decodeURIComponent(encodedUri);
+      console.log(decodedUri);
+      url = "http://www.basescripts.com?=Hello World"
+      let encodedUrl = encodeURIComponent(url);
+      console.log(encodedUrl)
+      */
+
+      let q = '6'
+      let m = parseInt(q);
+      console.log(typeof(m));
+
+      // Встроенные методы работы с массивами Javascript
+
+      // parseFloat - то же, что и parseInt, но не округляет числа
+      // .forEach - действие для каждого элемента массива
+      //. filter() - возвращает true\false для каждого элемента массива, создает новый массив, если true
+      // .every() - логическое условие для всех элементов массива
+      // .copywithin() - замена части массива с 3 значениями:
+      // copywithin(1,2,3) - 1:целевая позиция в которую копируются значения; 2:позиция, с которой начинать копирование; 3: конец копируемой последовательности
+      // .map - возвращает новый измененный массив, можно через стрелочную функцию пример: let mappedArr = arr.map(x => x+1)
+      // indexOf() - последнее встречающееся значение
+      // .lastIndexOf - последнее вхождение переменной в массиве
+      // .concat - объединение строк
+      // .split() - преобразовать строку в массив
+      // .join() - преобразовать массив в строку
+      // .search() - ищет индекс шаблона строки (indexOf ищет строку)
+      // .charAt(index) - узнать какой символ находится под конкретным индексом
+      // .slice(start, end) - создание подстроки
+      // .replace('что менять', 'на что менять') - замена фрагмента строки
+      // .replaceAll(1, 2)- замена всех фрагментов
+      // .toUppercase() - перевод в заглавные буквы
+      // .toLowercase - перевод в нижний регистр
+      // .startsWith() - проверить с чего начинается строка
+      // .endsWith() - проверить чем заканчивается
+     
+     
+      /*
+      const b = 'раздватри';
+      let n = b.split('');
+      console.log(n);
+
+
+
+      let arr = ['Laurence', 'Mike', 'Larry', 'Kim', 'Joanne', 'Laurence', 'Mike', 'Laurence', 'Mike', 'Laurence', 'Mike'];
+      */
+      /*  через цикл
+      let newResult = [];
+
+      for (let i = 0; i < arr.length; i++) {
+        
+        const name = arr[i];
+
+        if (newResult.includes(name)) {
+          continue;
+        } else {
+          newResult.push(name);
+        }
+        
+      }
+      console.log(newResult);
+      */
+      /*
+      let newArr = arr.filter((item, index) => arr.indexOf(item) === index);
+      console.log(newArr);
+
+      const numberArr = [1, 21, 13, 14, 6];
+      // стрелочная
+      const newNumberArr = numberArr.map((number) => number * 2);
+      console.log(newNumberArr);
+      
+
+      /* через функцию
+      function funNewNumber(number) {
+        return number * 2;
+      }
+      const newNumber = numberArr.map(funNewNumber);
+      console.log(newNumber);
+      */
+
+
+      let str = 'One daY youR EfForTs wIlL ResUlT iN sOmEtHinG REALlY gOoD!';
+
+      function stringChange (string) {
+        let newArr = [];
+        let newString = string.toLowerCase().split(' ');
+        newString.forEach((word) => {
+          let newWord = word.slice(0, 1).toUpperCase() + word.slice(1);
+          newArr.push(newWord);
+        })
+        return newArr.join(' ');               
+      }      
+      console.log(stringChange(str));
+
+      let f = 'I love Javascript';
+      let b = f.toLowerCase();
+      console.log(b);
+      const array = ['a', 'e', 'i', 'o', 'u'];
+      array.forEach((letter, index) => {
+        b = b.replaceAll(letter, index);
+      })
+      console.log(b);
+
+      const arr = ['Hi', 'world', 'hello', 'Hii', 'hi', 'hi world', 'Hi'];
+      const arr2 = arr.filter((element, index) => {
+        const ele2 = element.substring(0, 2);
+        return (ele2 == 'hi');
+      })
+      console.log(arr2);
+    </script>
+  </body>
+</html>

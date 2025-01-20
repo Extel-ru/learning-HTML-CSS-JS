@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Калькулятор</title>
+
+  </head>
+  <body>
+    
+    <script>
+      let firstNumber = 0;
+      let secondNumber = 0;
+      
+      let operator = '-';
+
+      function calculate (firstNumber, secondNumber, operator) {
+        if (operator === '-') {
+           return firstNumber - secondNumber;
+        } else {
+          return firstNumber + secondNumber;
+        }
+      }
+
+      // console.log(calculate(34, 12, operator));
+      // console.log(calculate(34, 12, 'anything'));
+
+      function returnNumbers( x, y) {
+        return x + y;
+      }
+
+      arr = [];
+      let temp = 0; 
+      for (let i = 0; i < 10; i++) {
+        let a = temp * 5;
+        let b = temp * temp;
+        let result = returnNumbers(a, b);
+        arr.push(result);
+        temp++;
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>

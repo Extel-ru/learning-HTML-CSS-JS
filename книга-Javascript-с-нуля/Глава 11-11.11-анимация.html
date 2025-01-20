@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Анимация</title>
+    <style>
+      .square {
+        height: 5rem;
+        width: 5rem;
+        border: 0.01rem solid black;
+        background-color: blueviolet;
+        position: absolute;
+      }
+    </style>
+
+</head>
+<body>
+  <div class="square" id="squareId"></div>
+
+  <script>
+    const sq = document.getElementById('squareId');
+    
+    let move = {
+      direction: 1,
+      position: 0
+    };
+
+    sq.addEventListener('click', () => {
+        let x = 30;
+              setInterval(function ()  {
+                if (x < 1) {
+                  clearInterval();
+                } else {
+                  if (move.position > 800 || move.position < 0) {
+                    move.direction *= -1;
+                  }
+                  x--;
+                  move.position += x * move.direction;
+                  sq.style.left = move.position + 'px';
+                  console.log(move.position);
+                }
+              }, 100);
+    })
+
+    
+  </script>
+</body>
+</html>

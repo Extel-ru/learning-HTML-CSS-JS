@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+      <title>JavaScript Course</title>
+  </head>
+
+  <body>
+      <div class="output"></div>
+      <input type="text" placeholder="Enter Email" class="js-input">
+      <button id="1">Check</button>
+
+      <script>
+        const outputEle = document.querySelector('.output');
+        const inputEle = document.querySelector('.js-input');
+        const buttonEle = document.getElementById('1');
+
+        const emailExp = /([A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z0-9]+)\w+/
+        
+        buttonEle.addEventListener('click', () => {
+          const input = inputEle.value;
+          const result = emailExp.test(input);
+          let response = '';
+          if(!result) {
+            response = 'Invalid Email';
+            outputEle.style.color = 'red';
+          } else {
+            response = 'Valid email';
+            outputEle.style.color = 'green';
+          }
+          inputEle.value = '';
+          outputEle.textContent = response;
+        });
+      </script>
+  </body>
+</html>

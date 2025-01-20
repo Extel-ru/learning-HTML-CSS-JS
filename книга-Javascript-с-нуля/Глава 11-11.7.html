@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Tester</title>
+
+  </head>
+  <body>
+    <div class="output"></div>
+
+    <input type="text" placeholder="First Name" name="first"><br>
+    <input type="text" placeholder="Last Name" name="last"><br>
+
+    <script>
+      let output = document.querySelector('.output');
+      let firstName = document.querySelector("input[name='first']");
+      let secondName = document.querySelector("input[name='last']");
+      
+      firstName.addEventListener('change', (e) =>{
+        changeOutput(firstName.value);
+      });
+      secondName.addEventListener('change', (e) => {
+        changeOutput(secondName.value);
+      })
+      firstName.addEventListener('focus', (e) =>{
+        changeOutput(firstName.value);
+      });
+
+      function changeOutput(element) {
+        output.textContent = element;
+      }
+    </script>
+  </body>
+</html>

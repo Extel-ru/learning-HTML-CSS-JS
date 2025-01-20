@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Интерактивный контент 11.1</title>
+
+  </head>
+  <body>
+    <div style="
+      height: 12.5rem;
+      width: 12.5rem;
+      display: flex;
+      border: 1px solid;      
+      align-items: center;
+      justify-content: center;
+      " class="js-elem"> Элемент</div>
+    <!--
+    <button>yellow</button>
+    <button>red</button>
+    <button>green</button>
+    <button>white</button>
+    -->
+    <script>
+      /*
+      let darkMode = false;
+      window.onclick = () => {
+        if(!darkMode) {
+          document.body.style.backgroundColor = 'grey';
+          document.body.style.color = 'white';
+          darkMode = true;
+        } else {
+          document.body.style.backgroundColor = 'white';
+          document.body.style.color = 'grey';
+          darkMode = false;
+        }
+      }
+      */
+     /*
+      let colorButtons = document.querySelectorAll('button');
+      
+      colorButtons.forEach((el)=> {
+        el.addEventListener('click', ()=> {
+          document.body.style.backgroundColor = el.textContent;
+        })
+      })
+      */
+
+      /*
+     document.addEventListener('DOMCintentLoaded', (e) => {
+      message('Document ready', e);
+     })
+      window.onload = (e) => {
+        message('window ready', e)
+      }
+      function message(string, event) {
+        console.log(string);
+        console.log(event)
+      }
+        */
+      let element = document.querySelector('.js-elem');
+      element.textContent = 'hello world';
+      element.style.width = '14rem';
+      element.style.height = '14rem';
+      element.style.position = 'fixed';
+      element.style.top = '50%';
+      element.style.left = '50%';
+      element.style.transform = 'translate(-50%, -50%)';
+
+      function change(color, event) {
+        console.log(color);
+        element.style.backgroundColor = color;
+        console.dir(event);
+      }
+
+      element.addEventListener('mousedown', function(e) {
+        change('red', e);
+      })
+      element.addEventListener('mouseover', function(e) {
+        change('green', e);
+      })
+      element.addEventListener('mouseout', function(e) {
+        change('blue', e);
+      })
+      element.addEventListener('mouseup', function(e) {
+        change('pink', e);
+      })
+    
+    </script>
+  </body>
+</html>

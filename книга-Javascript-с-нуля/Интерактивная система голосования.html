@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Интерактивная система голосования</title>
+
+  </head>
+  <body>
+    <div id="message">Complete Javascript Course</div>
+    <div>
+      <input type="text" id="addFriend">
+      <input type="button" id="addNew" value="Add Friend">
+    </div>
+    <table id="output"></table>
+
+    <script>
+      let myArray = ['Sergei', 'Alexandr', 'Vitaliy', 'Anatoliy', 'Anton', 'Maxim'];
+      let inputElement = document.getElementById('addFriend');
+      let outputElement = document.getElementById('output');
+      let addButton = document.getElementById('addNew');
+      
+      updateList();
+
+      addButton.addEventListener('click', () => {        
+        let newFriend = inputElement.value;
+        myArray.push(newFriend);
+        console.log(myArray); 
+        updateList();       
+      })
+      
+      function updateList() {
+        outputElement.innerHTML = '';
+        myArray.forEach((name, index) => {
+          let html = '';
+          html += `
+          <tr> 
+            <td>${index + 1}</td>
+            <td>${name}</td>
+            <td class="js-add-rating" onclick="addOnePoint(this)" style=" cursor: pointer";
+            > 0 </td>         
+          </tr>
+          `;
+          outputElement.innerHTML += html;
+        });
+      }
+
+      function addOnePoint(element) {
+        let currentRating = parseInt(element.innerText);
+        element.innerText = currentRating + 1;
+      }
+      
+    
+      
+      
+    </script>
+  </body>
+</html>

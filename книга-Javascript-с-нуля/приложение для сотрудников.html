@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Приложение для контроля сотрудников</title>
+
+  </head>
+  <body>
+    
+    <script>
+      class Employers {
+        constructor(firstname, secondname, years) {
+          this.firstname = firstname;
+          this.secondname = secondname;
+          this.years = years
+        }
+      }
+
+      let sidorovAV = new Employers('Alexandr', 'Sidorov', '3');
+      let nikitinPA = new Employers('Pavel', 'Nikitin', '9');
+      let voronovAV = new Employers('Anton', 'Voronov', 'less than 1 year');
+
+      let employersArray = [];
+
+      employersArray.push(sidorovAV, nikitinPA, voronovAV);
+      
+      Employers.prototype.info = function() {
+        return  (
+          `\nFist name:  ${this.firstname}
+            \nSecond name: ${this.secondname}
+            \nYears: ${this.years}`)
+
+      }
+      
+      employersArray.forEach(employer => {
+        console.log(employer.info());
+      })
+
+    </script>
+  </body>
+</html>

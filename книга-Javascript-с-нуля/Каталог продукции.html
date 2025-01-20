@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Каталог продукции</title>
+
+  </head>
+  <body>
+    
+    <script>
+      let products = [];
+      let basketball = {
+        id: 1,
+        priceCents: 50000,
+        quantity: 24
+      };
+      let football = {
+        id: 2,
+        priceCents: 48000,
+        quantity: 12
+      };
+      let volleyball = {
+        id: 3,
+        priceCents: 45000,
+        quantity: 20
+      };
+      products.push(basketball, football, volleyball);
+
+      volleyball.priceCents = 44000;
+      volleyball.color = 'red';
+
+      console.log(products);
+
+    </script>
+  </body>
+</html>
