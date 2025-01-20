@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM practice</title>
+
+</head>
+
+
+<body>
+<!--
+<button onclick="document.querySelector('.js-result')
+.innerHTML = 'You chose heads'">heads</button>
+<button onclick="document.querySelector('.js-result')
+.innerHTML ='You chose tails'">tails</button>
+<p class="js-result"></p>
+-->
+
+<input class="js-input" type="text" placeholder="Name" onkeydown="submitEnter()">
+<button class="js-button" onclick="submit()">Submit</button>
+<p class="js-result"></p>
+
+<script>
+
+  function submit () {
+    const textInput = document.querySelector('.js-input');
+    const submitButton = document.querySelector('.js-button');
+    const result = document.querySelector('.js-result');
+    
+   
+    if (inputValue !== '') {  
+    if (submitButton) {
+      result.textContent = `You chose ${inputValue}`;
+    } else {
+      result.textContent = 'Please enter a name';
+    }
+
+    submitButton.addEventListener('click', submit);
+        }
+}
+  
+  function submitEnter () {
+    const textInput = document.querySelector('.js-input');
+    const inputValue = textInput.value;
+    const result = document.querySelector('.js-result');
+    if (event.key === 'Enter') {
+      result.textContent = `You chose ${inputValue}`;
+    }
+  }
+
+
+
+</script>
+
+
+</body>
+
+</html>
